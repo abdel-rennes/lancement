@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="logo-menu-container">
+    <div class="logo">Un nouveau site très prochainement pour répondre à votre besoin</div>
+  </div>
+
+  <div class="clear"></div>
+  <div class="page">
+    <div class="clear"></div>
+    <div class="left-column">
+      <div class="dark-panel">
+        <div class="dark-panel-top"></div>
+        <div class="dark-panel-center">
+          <form [formGroup]="avisUserForm" (ngSubmit)="creerAvis()" >
+              <h1>Soumettre votre proposition : </h1>
+              <br>
+              <div class="form-group">
+                  <input formControlName='utilisateur' class="form-control" type="text">
+              </div>
+              <br>
+              <div class="form-group">
+                  <input formControlName='nomApplication' class="form-control" type="text">
+              </div>
+              <br>
+              <div class="form-group">
+                  <input formControlName='description' class="form-control" type="text">
+              </div>
+              <li class="button"><a href="#">Submit</a></li>
+          </form>
+        </div>
+        <div class="dark-panel-bottom"></div>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="right-column-content">
+        <div class="right-column-content-heading">
+          <h1>Les propositions des visiteurs :</h1>
+        </div>
+        <div class="right-column-content-content">
+            <app-proposition-details></app-proposition-details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
