@@ -1,8 +1,18 @@
 <div class="row">
-    <ul class="list-group col-12">
-      <li *ngFor="let ingredient of listeAvisUser" class="list-group-item list-group-item-action">
-        {{ingredient}} <span class="badge badge-pill badge-primary float-right"> 22 </span>
-      </li>
-    </ul>
+  <div class=" col-md-12  custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>utilisateur</th>
+            <th>Application</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+      <tr *ngFor="let avisUser of listeAvisUser" >
+        <td>{{avisUser.user}}</td>
+        <td>{{avisUser.nomAppl}}</td>
+        <td>{{avisUser.description}}</td>
+      </tr>
+    </table>
+  </div>
 </div>
-

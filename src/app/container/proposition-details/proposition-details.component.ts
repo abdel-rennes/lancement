@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AvisUser} from '../../shared/model/avis.model'
+import {AvisUserService} from '../../shared/services/avis-user.service'
+
 
 @Component({
   selector: 'app-proposition-details',
@@ -7,11 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropositionDetailsComponent implements OnInit {
 
-  public listeAvisUser:string[] = ["test","test","test"];
+  public listeAvisUser:AvisUser[] = [new AvisUser("abdel","test","description")];
   
-  constructor() { }
+  constructor(public avisUserService:AvisUserService) { }
 
   ngOnInit() {
+    this.avisUserService.avisUser.subscribe((avisUser:AvisUser[]) => {
+      this.listeAvisUser = avisUser;
+    }); 
   }
 
 }

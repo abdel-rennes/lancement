@@ -14,17 +14,20 @@
               <h1>Soumettre votre proposition : </h1>
               <br>
               <div class="form-group">
-                  <input formControlName='utilisateur' class="form-control" type="text">
+                  <input formControlName='user' class="form-control" type="text">
               </div>
               <br>
               <div class="form-group">
-                  <input formControlName='nomApplication' class="form-control" type="text">
+                  <input formControlName='nomAppl' class="form-control" type="text">
               </div>
               <br>
               <div class="form-group">
-                  <input formControlName='description' class="form-control" type="text">
+                  <textarea formControlName='description' class="form-control" ></textarea>
               </div>
-              <li class="button"><a href="#">Submit</a></li>
+              <br>
+              <div class="row">
+                <button  class="btn btn-danger ml-auto" style="padding-right:20px;padding-left:20px"> Soumettre </button>
+              </div>
           </form>
         </div>
         <div class="dark-panel-bottom"></div>
